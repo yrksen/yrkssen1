@@ -18,9 +18,13 @@ const setMeta = (attr: string, value: string, key: 'name' | 'property' = 'name')
 
 export function updatePageMeta({ title, description, image, type, url }: MetaOptions) {
   const siteTitle = 'Trash Bin';
-  const fullTitle = title ? `${title} — ${siteTitle}` : `${siteTitle} — Movie Collection`;
-  const desc = description ?? 'A curated personal movie collection. Browse, rate, review, and discover films.';
-  const img = image ?? 'https://i.imgur.com/vUiVqow.png?direct';
+  const fullTitle = title ? `${title} — ${siteTitle}` : siteTitle;
+
+const desc =
+  description ??
+  'Build your personal movie library on Trash Bin, track watched films, save movies for later, and explore cinema through a nostalgic Windows XP-style interface.';
+
+const img = image ?? 'https://i.imgur.com/vUiVqow.png?direct';
   const pageUrl = url ?? window.location.href;
 
   document.title = fullTitle;
